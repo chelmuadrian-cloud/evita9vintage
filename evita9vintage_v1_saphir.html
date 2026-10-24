@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>evita9vintage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,400;1,6..96,500&family=Jost:wght@300;400;500&display=swap">
+<style>
+:root{
+  color-scheme:dark;
+  --night:#0F1635; --ivory:#F6EEDC; --ink:#1A1530; --gold:#E8B04A; --blush:#F4C7BD;
+  --wine:#7A1638; --emerald:#0E6B57; --teal:#1C8FA0; --plum:#5B2A86;
+  --serif:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --sans:"Jost","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--night);color:var(--ivory);font:300 1.1rem/1.6 var(--sans);overflow-x:hidden}
+.w{max-width:64rem;margin-inline:auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(60rem 30rem at 85% -10%,rgba(91,42,134,.55),transparent 60%),
+  radial-gradient(50rem 28rem at 0% 30%,rgba(14,107,87,.35),transparent 60%),var(--night)}
+.hero .w{padding-top:clamp(56px,10vw,120px);text-align:center}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.6rem,10.5vw,7.4rem);line-height:1;margin:0;letter-spacing:-.01em;overflow-wrap:anywhere}
+h1 .a{color:var(--ivory)}
+h1 .n{font-style:italic;font-weight:700;background:linear-gradient(100deg,#B9822C 0%,#FFE9A8 35%,#E8B04A 50%,#B9822C 70%,#FFE9A8 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 7s ease-in-out infinite}
+h1 .b{font-style:italic;font-weight:400;color:var(--blush)}
+.sub{margin:22px auto 0;font-size:1.15rem;color:rgba(246,238,220,.82);max-width:26rem}
+.cta{display:inline-block;margin-top:34px;padding:17px 38px;border-radius:99px;background:var(--gold);color:var(--ink);text-decoration:none;font-weight:500;font-size:.85rem;letter-spacing:.22em;text-transform:uppercase;box-shadow:0 10px 30px rgba(232,176,74,.28);transition:transform .3s,box-shadow .3s,background .3s}
+.cta:hover{transform:translateY(-3px);box-shadow:0 16px 38px rgba(232,176,74,.4);background:#F3C26A}
+.arches{display:flex;align-items:flex-end;justify-content:center;gap:clamp(6px,1.6vw,18px);margin-top:clamp(48px,8vw,90px);height:clamp(150px,26vw,300px)}
+.ar{flex:1 1 0;max-width:9rem;min-width:0;border-radius:999px 999px 0 0;position:relative;transform-origin:50% 100%;animation:grow 1.1s cubic-bezier(.2,.8,.2,1) both;transition:transform .5s cubic-bezier(.2,.8,.2,1),filter .4s}
+.ar::before{content:"";position:absolute;inset:clamp(6px,1.2vw,12px) clamp(6px,1.2vw,12px) 0;border:1.5px solid rgba(255,255,255,.38);border-bottom:0;border-radius:999px 999px 0 0}
+.ar::after{content:"";position:absolute;inset:clamp(16px,2.6vw,28px) clamp(16px,2.6vw,28px) 0;border:1px solid rgba(255,255,255,.2);border-bottom:0;border-radius:999px 999px 0 0}
+.ar:hover{transform:translateY(-10px);filter:brightness(1.12)}
+.ar:nth-child(1){height:58%;background:var(--wine);animation-delay:.05s}
+.ar:nth-child(2){height:78%;background:var(--emerald);animation-delay:.15s}
+.ar:nth-child(3){height:100%;background:var(--gold);animation-delay:.25s}
+.ar:nth-child(4){height:84%;background:var(--blush);animation-delay:.35s}
+.ar:nth-child(5){height:100%;background:var(--teal);animation-delay:.45s}
+.ar:nth-child(6){height:70%;background:var(--plum);animation-delay:.55s}
+.ar:nth-child(7){height:54%;background:var(--wine);animation-delay:.65s}
+.ar:nth-child(3)::before,.ar:nth-child(3)::after,.ar:nth-child(4)::before,.ar:nth-child(4)::after{border-color:rgba(26,21,48,.35)}
+@keyframes grow{from{transform:scaleY(.05);opacity:.2}to{transform:none;opacity:1}}
+@keyframes shine{0%,55%{background-position:100% 0}100%{background-position:-60% 0}}
+.contact{background:var(--ivory);color:var(--ink);padding-block:clamp(44px,7vw,80px)}
+.contact .w{display:flex;flex-wrap:wrap;gap:28px 64px;justify-content:center;text-align:center}
+.item{min-width:0}
+.item small{display:block;font-size:.74rem;letter-spacing:.32em;text-transform:uppercase;color:var(--wine);font-weight:500}
+.item a{display:inline-block;margin-top:8px;font:500 clamp(1.4rem,4.2vw,2.1rem) var(--serif);text-decoration:none;border-bottom:2px solid var(--gold);overflow-wrap:anywhere;transition:color .3s,border-color .3s}
+.item a:hover{color:var(--wine);border-color:var(--wine)}
+footer{background:var(--ink);color:rgba(246,238,220,.75);padding-block:22px 26px;text-align:center;font-size:.9rem;letter-spacing:.06em}
+@media (prefers-reduced-motion:reduce){.ar,h1 .n{animation:none}.ar,.cta{transition:none}}
+</style>
+</head>
+<body>
+<main>
+<div class="hero"><div class="w">
+  <h1><span class="a">evita</span><span class="n">9</span><span class="b">vintage</span></h1>
+  <p class="sub">Des pièces choisies une à une.</p>
+  <a class="cta" href="https://www.ricardo.ch/fr/shop/evita9vintage/offers/" target="_blank" rel="noopener">Voir les annonces</a>
+  <div class="arches" aria-hidden="true"><i class="ar"></i><i class="ar"></i><i class="ar"></i><i class="ar"></i><i class="ar"></i><i class="ar"></i><i class="ar"></i></div>
+</div></div>
+<div class="contact"><div class="w">
+  <div class="item"><small>E-mail</small><a href="mailto:info@evita9vintage.ch">info@evita9vintage.ch</a></div>
+  <div class="item"><small>Téléphone</small><a href="tel:+41793137444">079 313 74 44</a></div>
+</div></div>
+</main>
+<footer>Les ventes sont conclues par l'intermédiaire de Ricardo.</footer>
+</body></html>

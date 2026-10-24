@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>evita9vintage</title>
+<meta name="description" content="Des pièces vintage choisies une à une. Ventes via Ricardo.">
+<script>document.documentElement.className+=" js"</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700;1,900&family=Parisienne&family=Nunito:wght@400;600;700&display=swap">
+<style>
+/* New York glamour, 2001 : crépuscule sur Manhattan, bulles de champagne, or chromé, sacs de shopping qui se retournent. */
+:root{color-scheme:dark;
+  --plum:#150828;--plum2:#3a0f55;--pink:#ff4fa3;--blush:#ffb6d9;--gold:#e8a93b;--gold2:#ffe08a;--cream:#fff6e2;--ink:#3b2a33;--bar:62px;
+  --serif:"Playfair Display",Georgia,"Times New Roman",serif;--script:Parisienne,"Snell Roundhand","Apple Chancery",cursive;--sans:Nunito,"Trebuchet MS",Verdana,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:#fff;font:400 1.12rem/1.6 var(--sans);overflow-x:hidden;background:var(--plum)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold2);outline-offset:3px}
+.w{max-width:64rem;margin-inline:auto;padding-inline:max(18px,env(safe-area-inset-left,0px))}
+/* ciel et skyline */
+.hero{position:relative;overflow:hidden;text-align:center;padding-top:clamp(46px,8vw,96px);
+  background:radial-gradient(34rem 20rem at 50% 100%,rgba(255,200,150,.55),transparent 70%),linear-gradient(180deg,#12082e 0%,#3a0f58 36%,#a3207e 64%,#ff6fa8 82%,#ffc39a 100%)}
+.hero .w{position:relative;z-index:2;padding-bottom:clamp(120px,24vw,260px)}
+h1{margin:0;font:italic 900 clamp(2.4rem,12.4vw,7.2rem)/1.08 var(--serif);letter-spacing:-.01em;white-space:nowrap;
+  background:linear-gradient(110deg,transparent 42%,rgba(255,255,255,.95) 50%,transparent 58%) 160% 0/250% 100% no-repeat,
+             linear-gradient(180deg,#fff8dc 0%,#ffe08a 30%,#e8a93b 50%,#fff0b3 52%,#d98b2b 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:1px rgba(120,60,0,.45);
+  filter:drop-shadow(0 3px 0 #8a4b0f) drop-shadow(0 0 22px rgba(255,110,190,.6));animation:shim 5.5s ease-in-out infinite}
+h1 .n{font-style:normal;background:linear-gradient(110deg,transparent 42%,rgba(255,255,255,.95) 50%,transparent 58%) 160% 0/250% 100% no-repeat,linear-gradient(180deg,#ffd6ec 0%,#ff7cc0 30%,#e0177a 50%,#ffb0dc 52%,#c2105f 100%);-webkit-background-clip:text;background-clip:text}
+@keyframes shim{0%,45%{background-position:160% 0,0 0}100%{background-position:-60% 0,0 0}}
+.sub{margin:18px auto 0;font:italic 500 clamp(1.35rem,3.6vw,1.9rem)/1.3 var(--serif);color:#fff;text-shadow:0 2px 14px rgba(40,0,50,.7);max-width:28rem}
+.cta{display:inline-block;margin-top:28px;padding:17px 40px;border-radius:99px;color:#fff;text-decoration:none;font:700 1rem var(--sans);letter-spacing:.14em;text-transform:uppercase;
+  background:linear-gradient(rgba(255,255,255,.62),rgba(255,255,255,.06)) 0 0/100% 50% no-repeat,linear-gradient(#ff9fd0 0%,#ff4fa3 48%,#e0177a 52%,#ff6db4 100%);
+  border:2px solid rgba(255,255,255,.9);box-shadow:0 8px 26px rgba(255,60,160,.55),inset 0 -3px 6px rgba(120,0,60,.35);text-shadow:0 1px 2px rgba(120,0,60,.75);animation:glow 3s ease-in-out infinite;transition:transform .25s}
+.cta:hover{transform:translateY(-3px) scale(1.03)}
+@keyframes glow{0%,100%{box-shadow:0 8px 26px rgba(255,60,160,.5),inset 0 -3px 6px rgba(120,0,60,.35)}50%{box-shadow:0 8px 40px rgba(255,120,200,.95),inset 0 -3px 6px rgba(120,0,60,.35)}}
+.sky-wrap{position:absolute;left:0;right:0;bottom:-1px;z-index:1;pointer-events:none;overflow:hidden;height:clamp(120px,22vw,260px)}
+.sky-svg{position:absolute;left:50%;bottom:0;width:max(100%,900px);height:100%;transform:translateX(-50%)}
+.wa{animation:tw 3.4s ease-in-out infinite}.wb{animation:tw 4.6s ease-in-out infinite;animation-delay:-1.7s}
+@keyframes tw{0%,100%{opacity:1}50%{opacity:.25}}
+.bb{position:absolute;bottom:-40px;left:0;width:var(--s);height:var(--s);border-radius:50%;z-index:0;pointer-events:none;
+  background:radial-gradient(circle at 30% 28%,rgba(255,255,255,.95),rgba(255,255,255,.25) 40%,rgba(255,255,255,.08) 70%);border:1px solid rgba(255,255,255,.55);
+  animation:rise var(--d) linear infinite;animation-delay:var(--l)}
+@keyframes rise{0%{transform:translate(0,0)}50%{transform:translate(var(--x),-48vh)}100%{transform:translate(calc(var(--x)*-1),-105vh)}}
+.spk{position:absolute;z-index:0;width:var(--s);height:var(--s);pointer-events:none;animation:twk var(--du) ease-in-out infinite;animation-delay:var(--dl);
+  background:#fff;clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);filter:drop-shadow(0 0 6px #fff)}
+@keyframes twk{0%,100%{opacity:0;transform:scale(.3) rotate(0)}50%{opacity:1;transform:scale(1) rotate(45deg)}}
+/* bandeau des villes */
+.ticker{background:var(--plum);border-top:2px solid var(--gold);border-bottom:2px solid var(--gold);overflow:hidden;white-space:nowrap;padding:10px 0;box-shadow:0 0 0 1px rgba(255,224,138,.25) inset}
+.tk{display:flex;width:max-content;animation:tick 80s linear infinite}
+.tk>div{display:flex;flex:none;align-items:baseline}
+.ci{display:inline-flex;align-items:baseline;gap:.55em;padding:0 .2em}
+.ci b{font:italic 500 clamp(1.3rem,3.4vw,1.75rem) var(--serif);color:#ffe8b8}
+.ci .clk{font:600 .9rem var(--sans);font-style:normal;color:var(--blush);opacity:.8;letter-spacing:.06em}
+.tk .s{color:var(--gold2);padding:0 .8em;font-size:1rem}
+@keyframes tick{to{transform:translateX(-50%)}}
+/* section cartes */
+.flips{position:relative;background:linear-gradient(var(--plum),#3a0f55 55%,#5a1768);padding:clamp(44px,8vw,90px) 0 clamp(36px,6vw,64px);overflow:hidden}
+.flips .w{position:relative;z-index:1}
+.flips h2{margin:0;text-align:center;font:italic 700 clamp(2rem,6.2vw,3.5rem)/1.1 var(--serif);color:#fff;text-shadow:0 0 22px rgba(255,110,190,.7)}
+.flips h2 b{display:block;font:400 clamp(1.5rem,4vw,2.2rem) var(--script);color:var(--gold2);margin-bottom:4px}
+.flips .lead{margin:14px auto 0;max-width:34rem;text-align:center;font-size:1.18rem;color:#ffe8f4}
+.deck{display:grid;grid-template-columns:repeat(auto-fit,minmax(13.6rem,1fr));gap:38px 26px;margin-top:clamp(30px,5vw,52px)}
+.fw{perspective:1200px}
+.flip{display:block;width:100%;height:29rem;padding:0;border:0;background:none;font:inherit;color:inherit;text-align:center;cursor:pointer;position:relative}
+.inner{display:block;position:absolute;inset:0;transition:transform .85s cubic-bezier(.3,1.2,.5,1);transform-style:preserve-3d}
+@media (hover:hover){.flip:hover .inner{transform:rotateY(180deg)}}
+.flip[aria-pressed="true"] .inner{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;display:block;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.back{transform:rotateY(180deg)}
+/* face avant : sac de shopping */
+.bag{position:absolute;left:5%;right:5%;top:48px;bottom:0;border-radius:8px 8px 16px 16px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:26px 14px 18px;
+  background:linear-gradient(115deg,rgba(255,255,255,.3) 0,rgba(255,255,255,0) 38%),linear-gradient(90deg,rgba(0,0,0,.2),transparent 16%,transparent 84%,rgba(0,0,0,.2)),var(--bag);
+  box-shadow:0 18px 30px rgba(0,0,0,.5),inset 0 0 0 2px rgba(255,255,255,.2)}
+.bag::before{content:"";position:absolute;left:25%;right:25%;top:-44px;height:64px;border:6px solid var(--hd,#f4d27a);border-bottom:0;border-radius:70px 70px 0 0;filter:drop-shadow(0 2px 2px rgba(0,0,0,.4))}
+.bag::after{content:"";position:absolute;left:0;right:0;top:0;height:14px;background:rgba(0,0,0,.18);border-radius:8px 8px 0 0}
+.lab{font:italic 700 1.5rem/1.15 var(--serif);color:var(--lc,#fff);padding:.2em .75em;border-radius:99px;background:var(--lbg,rgba(0,0,0,.32));border:1px solid rgba(255,255,255,.35);text-shadow:0 1px 2px rgba(0,0,0,.5)}
+.ic{flex:1;min-height:0;display:grid;place-items:center;width:100%}
+.ic svg{width:58%;max-width:8.6rem;height:auto;max-height:100%;filter:drop-shadow(0 3px 4px rgba(0,0,0,.4))}
+.hint{display:inline-block;padding:7px 14px;border-radius:99px;border:1px solid rgba(255,255,255,.85);background:var(--hbg,rgba(0,0,0,.32));color:var(--hc,#fff);font:700 .82rem var(--sans);letter-spacing:.1em;text-transform:uppercase}
+/* face arrière : carton d'invitation */
+.card{position:absolute;inset:14px 0 0;display:flex;flex-direction:column;padding:20px 20px 16px;border-radius:16px;color:var(--ink);
+  background:radial-gradient(circle at 18% 8%,#fff,#fff6e2 60%,#f6e3b9);border:3px double #c9962f;box-shadow:0 18px 34px rgba(0,0,0,.5),inset 0 0 0 5px rgba(255,255,255,.7)}
+.card .cl{font:italic 700 1.9rem/1.1 var(--serif);color:#b3125a;text-align:center}
+.card .orn{margin:6px 0 10px;text-align:center;color:var(--gold);letter-spacing:.4em;font-size:.8rem}
+.note{display:block;flex:1;min-height:0;font:600 1.02rem/1.5 var(--sans);color:#2a1a22;text-align:left;overflow:hidden}
+.loc{display:flex;justify-content:space-between;align-items:baseline;margin-top:10px;padding-top:8px;border-top:2px dotted rgba(201,150,47,.8);font:700 .82rem var(--sans);letter-spacing:.1em;text-transform:uppercase;color:#7a5a2a}
+.loc .clk{font:600 .95rem var(--sans);color:#7a5a2a;letter-spacing:.06em}
+/* icônes animées */
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes ringb{0%,100%{transform:rotate(-14deg)}50%{transform:rotate(14deg)}}
+@keyframes drift24{to{transform:translateX(24px)}}
+.spin,.spinr,.bell,.star{transform-box:fill-box;transform-origin:center}
+.spin{animation:spin 8s linear infinite}.spinr{animation:spin 6s linear infinite reverse}
+.bell{transform-origin:50% 8%;animation:ringb 2.2s ease-in-out infinite}
+.star{animation:twk 2.4s ease-in-out infinite}.star:nth-of-type(2){animation-delay:.8s}.star:nth-of-type(3){animation-delay:1.5s}
+.wv{animation:drift24 2.6s linear infinite}
+/* contact */
+.contact{max-width:34rem;margin:clamp(40px,7vw,70px) auto 0;text-align:center;padding:28px 22px;border-radius:24px;background:linear-gradient(#1c0833,#2a0d45);
+  border:2px solid var(--gold);box-shadow:0 14px 40px rgba(0,0,0,.4),inset 0 0 0 5px rgba(20,5,40,.9),inset 0 0 0 6px rgba(232,169,59,.5)}
+.contact h3{margin:0 0 16px;font:italic 700 clamp(1.9rem,6vw,2.4rem)/1.1 var(--serif);color:var(--gold2)}
+.item+.item{margin-top:18px}
+.item small{display:block;font:700 .85rem var(--sans);letter-spacing:.22em;text-transform:uppercase;color:#ffc9e4}
+.item a{display:inline-block;margin-top:4px;font:700 clamp(1.3rem,5.6vw,1.9rem)/1.3 var(--serif);color:#fff;text-decoration:none;border-bottom:3px solid var(--gold);overflow-wrap:anywhere;transition:color .25s}
+.item a:hover{color:var(--gold2)}
+/* bandeau fixe du haut : bouton toujours visible */
+.top{position:fixed;left:0;right:0;top:0;z-index:60;display:flex;align-items:center;justify-content:center;gap:16px;padding:8px 14px calc(8px);
+  background:rgba(30,6,50,.78);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,224,138,.6);
+  transform:translateY(-110%);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.top.on{transform:none}
+.top .nm{font:italic 900 1.45rem var(--serif);color:var(--gold2);white-space:nowrap}
+.top .cta{margin:0;padding:11px 26px;font-size:.88rem;animation:none}
+@media (max-width:420px){.top .nm{font-size:1.15rem}.top .cta{padding:11px 18px;font-size:.8rem}.top{gap:10px}}
+footer{background:#150828;color:rgba(255,232,244,.85);padding:20px 18px calc(24px + var(--bar) + env(safe-area-inset-bottom,0px));text-align:center;font-size:.95rem;letter-spacing:.03em;border-top:1px solid rgba(255,224,138,.35)}
+/* barre du bas : verre dépoli */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;align-items:center;justify-content:center;gap:10px;padding:9px 12px calc(9px + env(safe-area-inset-bottom,0px));
+  background:rgba(40,8,60,.62);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid rgba(255,255,255,.5)}
+.langs{display:flex;gap:8px}
+.langs button{font:700 .9rem var(--sans);letter-spacing:.1em;color:#fff;min-width:3.4rem;height:42px;padding:0 14px;border-radius:99px;cursor:pointer;border:1px solid rgba(255,255,255,.8);
+  background:linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.04)) 0 0/100% 50% no-repeat,rgba(255,255,255,.14);text-shadow:0 1px 2px rgba(0,0,0,.4);transition:transform .2s}
+.langs button:hover{transform:translateY(-2px)}
+.langs button[aria-pressed="true"]{background:linear-gradient(rgba(255,255,255,.62),rgba(255,255,255,.06)) 0 0/100% 50% no-repeat,linear-gradient(#ff9fd0,#ff4fa3 48%,#e0177a 52%,#ff6db4);box-shadow:0 0 16px rgba(255,90,170,.8)}
+.tray{position:absolute;right:14px;font:600 .9rem var(--sans);color:var(--blush);opacity:.85;letter-spacing:.06em}
+@media (max-width:480px){.tray{display:none}}
+/* apparition */
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i,0)*.14s)}
+.js .rv.in{opacity:1;transform:none}
+@media (max-width:600px){.flip{height:27rem}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv{opacity:1;transform:none}.bb{display:none}
+  .tk{width:auto;flex-wrap:wrap;justify-content:center;white-space:normal}.tk>div:nth-child(2){display:none}
+}
+
+footer p{margin:0}footer .cr{margin-top:10px;font-size:.88rem;font-style:normal;opacity:.85;letter-spacing:.02em}footer .cr a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+
+/* évite le tremblement : seule la zone fixe du bouton réagit au survol */
+.inner,.inner *{pointer-events:none}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff3c2"/><stop offset=".45" stop-color="#f2c04e"/><stop offset=".5" stop-color="#fff0b0"/><stop offset="1" stop-color="#c98a22"/></linearGradient>
+</defs></svg>
+<div class="top" id="top"><span class="nm" aria-hidden="true">evita9vintage</span><a class="cta" id="cta2" data-t="cta" href="https://www.ricardo.ch/fr/shop/evita9vintage/offers/" target="_blank" rel="noopener" tabindex="-1">Voir les annonces</a></div>
+<main>
+<header class="hero">
+  <i class="spk" style="left:23%;top:46%;--s:24px;--dl:2.0s;--du:2.8s"></i><i class="spk" style="left:53%;top:35%;--s:14px;--dl:2.5s;--du:4.1s"></i><i class="spk" style="left:27%;top:30%;--s:24px;--dl:0.9s;--du:4.4s"></i><i class="spk" style="left:28%;top:20%;--s:14px;--dl:2.0s;--du:4.2s"></i><i class="spk" style="left:7%;top:11%;--s:18px;--dl:3.3s;--du:2.5s"></i><i class="spk" style="left:62%;top:38%;--s:14px;--dl:3.3s;--du:3.1s"></i><i class="spk" style="left:68%;top:66%;--s:18px;--dl:2.9s;--du:4.2s"></i><i class="spk" style="left:81%;top:60%;--s:18px;--dl:0.3s;--du:2.3s"></i><i class="spk" style="left:79%;top:8%;--s:18px;--dl:2.3s;--du:2.9s"></i><i class="spk" style="left:74%;top:5%;--s:14px;--dl:1.6s;--du:2.7s"></i><i class="spk" style="left:36%;top:33%;--s:14px;--dl:3.2s;--du:4.6s"></i><i class="spk" style="left:16%;top:60%;--s:10px;--dl:2.5s;--du:3.8s"></i><i class="spk" style="left:49%;top:12%;--s:14px;--dl:0.8s;--du:3.3s"></i><i class="spk" style="left:24%;top:4%;--s:24px;--dl:2.1s;--du:2.3s"></i><i class="spk" style="left:30%;top:37%;--s:18px;--dl:2.2s;--du:4.5s"></i><i class="spk" style="left:66%;top:23%;--s:24px;--dl:3.4s;--du:3.9s"></i><i class="spk" style="left:30%;top:14%;--s:24px;--dl:3.7s;--du:3.9s"></i><i class="spk" style="left:18%;top:60%;--s:24px;--dl:0.8s;--du:4.3s"></i><i class="spk" style="left:2%;top:51%;--s:18px;--dl:1.9s;--du:3.8s"></i><i class="spk" style="left:28%;top:15%;--s:10px;--dl:0.9s;--du:4.4s"></i><i class="spk" style="left:13%;top:42%;--s:18px;--dl:1.0s;--du:3.9s"></i><i class="spk" style="left:4%;top:47%;--s:10px;--dl:0.1s;--du:3.0s"></i><i class="spk" style="left:55%;top:38%;--s:24px;--dl:3.7s;--du:2.7s"></i><i class="spk" style="left:10%;top:57%;--s:10px;--dl:0.7s;--du:3.0s"></i><i class="spk" style="left:19%;top:63%;--s:14px;--dl:4.0s;--du:4.4s"></i><i class="spk" style="left:68%;top:59%;--s:24px;--dl:2.3s;--du:3.9s"></i><i class="bb" style="left:45%;--s:24px;--d:18s;--l:-4s;--x:7px"></i><i class="bb" style="left:7%;--s:8px;--d:16s;--l:-11s;--x:14px"></i><i class="bb" style="left:42%;--s:9px;--d:9s;--l:-2s;--x:0px"></i><i class="bb" style="left:11%;--s:17px;--d:14s;--l:-4s;--x:-26px"></i><i class="bb" style="left:12%;--s:22px;--d:17s;--l:-11s;--x:17px"></i><i class="bb" style="left:8%;--s:12px;--d:14s;--l:-11s;--x:-25px"></i><i class="bb" style="left:90%;--s:23px;--d:10s;--l:-13s;--x:30px"></i><i class="bb" style="left:6%;--s:23px;--d:18s;--l:0s;--x:9px"></i><i class="bb" style="left:87%;--s:20px;--d:15s;--l:0s;--x:8px"></i><i class="bb" style="left:12%;--s:10px;--d:10s;--l:-3s;--x:-14px"></i><i class="bb" style="left:56%;--s:18px;--d:15s;--l:-14s;--x:-2px"></i><i class="bb" style="left:62%;--s:25px;--d:10s;--l:-16s;--x:18px"></i><i class="bb" style="left:68%;--s:8px;--d:13s;--l:-2s;--x:0px"></i><i class="bb" style="left:5%;--s:15px;--d:10s;--l:-15s;--x:19px"></i><i class="bb" style="left:81%;--s:23px;--d:13s;--l:0s;--x:-7px"></i><i class="bb" style="left:41%;--s:12px;--d:18s;--l:-6s;--x:3px"></i>
+  <div class="w">
+    <h1>evita<span class="n">9</span>vintage</h1>
+    <p class="sub" data-t="sub">Des pièces choisies une à une.</p>
+    <a class="cta" id="cta" data-t="cta" href="https://www.ricardo.ch/fr/shop/evita9vintage/offers/" target="_blank" rel="noopener">Voir les annonces</a>
+  </div>
+  <div class="sky-wrap"><svg class="sky-svg" viewBox="0 0 1200 230" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+<g fill="#4a1a70" opacity=".85">
+<rect x="-10" y="89" width="40" height="141"/>
+<rect x="36" y="103" width="40" height="127"/>
+<rect x="80" y="137" width="32" height="93"/>
+<rect x="115" y="82" width="46" height="148"/>
+<rect x="161" y="122" width="40" height="108"/>
+<rect x="180" y="104" width="2" height="18"/>
+<rect x="205" y="155" width="51" height="75"/>
+<rect x="259" y="82" width="40" height="148"/>
+<rect x="303" y="93" width="26" height="137"/>
+<rect x="315" y="75" width="2" height="18"/>
+<rect x="329" y="130" width="32" height="100"/>
+<rect x="367" y="119" width="40" height="111"/>
+<rect x="413" y="94" width="32" height="136"/>
+<rect x="428" y="76" width="2" height="18"/>
+<rect x="447" y="160" width="41" height="70"/>
+<rect x="491" y="125" width="46" height="105"/>
+<rect x="541" y="150" width="52" height="80"/>
+<rect x="595" y="131" width="50" height="99"/>
+<rect x="645" y="88" width="28" height="142"/>
+<rect x="676" y="123" width="29" height="107"/>
+<rect x="705" y="160" width="47" height="70"/>
+<rect x="727" y="142" width="2" height="18"/>
+<rect x="752" y="112" width="41" height="118"/>
+<rect x="796" y="151" width="39" height="79"/>
+<rect x="836" y="126" width="50" height="104"/>
+<rect x="888" y="159" width="36" height="71"/>
+<rect x="930" y="143" width="29" height="87"/>
+<rect x="943" y="125" width="2" height="18"/>
+<rect x="959" y="153" width="26" height="77"/>
+<rect x="988" y="89" width="31" height="141"/>
+<rect x="1002" y="71" width="2" height="18"/>
+<rect x="1023" y="144" width="32" height="86"/>
+<rect x="1058" y="110" width="29" height="120"/>
+<rect x="1088" y="126" width="26" height="104"/>
+<rect x="1120" y="122" width="44" height="108"/>
+<rect x="1164" y="137" width="32" height="93"/>
+</g>
+<g fill="#150828">
+<rect x="-6" y="179" width="36" height="51"/>
+<rect x="35" y="151" width="58" height="79"/>
+<rect x="62" y="137" width="4" height="14"/>
+<rect x="100" y="135" width="48" height="95"/>
+<rect x="122" y="121" width="4" height="14"/>
+<rect x="151" y="110" width="43" height="120"/>
+<rect x="196" y="137" width="53" height="93"/>
+<rect x="253" y="111" width="60" height="119"/>
+<rect x="281" y="97" width="4" height="14"/>
+<rect x="321" y="104" width="41" height="126"/>
+<rect x="339" y="90" width="4" height="14"/>
+<rect x="367" y="160" width="45" height="70"/>
+<rect x="387" y="146" width="4" height="14"/>
+<rect x="542" y="135" width="42" height="95"/>
+<rect x="587" y="178" width="56" height="52"/>
+<rect x="613" y="164" width="4" height="14"/>
+<rect x="645" y="152" width="62" height="78"/>
+<rect x="811" y="131" width="46" height="99"/>
+<rect x="866" y="118" width="48" height="112"/>
+<rect x="888" y="104" width="4" height="14"/>
+<rect x="917" y="155" width="38" height="75"/>
+<rect x="958" y="157" width="47" height="73"/>
+<rect x="1010" y="176" width="31" height="54"/>
+<rect x="1050" y="177" width="45" height="53"/>
+<rect x="1070" y="163" width="4" height="14"/>
+<rect x="1101" y="117" width="53" height="113"/>
+<rect x="1158" y="138" width="35" height="92"/>
+<rect x="1173" y="124" width="4" height="14"/>
+<rect x="470" y="110" width="70" height="120"/>
+<rect x="479" y="80" width="52" height="30"/>
+<rect x="487" y="58" width="36" height="22"/>
+<rect x="496" y="42" width="18" height="16"/>
+<rect x="503" y="8" width="4" height="34"/>
+<rect x="740" y="90" width="60" height="140"/>
+<path d="M740 90A30 28 0 0 1 800 90z"/>
+<path d="M748 64A22 20 0 0 1 792 64z"/>
+<path d="M756 46A14 14 0 0 1 784 46z"/>
+<rect x="768" y="8" width="4" height="40"/>
+</g>
+<path class="wa" d="M-1 189h26M-1 213h26M40 161h48M40 185h48M40 209h48M105 145h38M105 169h38M105 193h38M105 217h38M156 120h33M156 144h33M156 168h33M156 192h33M156 216h33M201 147h43M201 171h43M201 195h43M201 219h43M258 121h50M258 145h50M258 169h50M258 193h50M258 217h50M326 114h31M326 138h31M326 162h31M326 186h31M326 210h31M372 170h35M372 194h35M372 218h35M547 145h32M547 169h32M547 193h32M547 217h32M592 188h46M592 212h46M650 162h52M650 186h52M650 210h52M816 141h36M816 165h36M816 189h36M816 213h36M871 128h38M871 152h38M871 176h38M871 200h38M922 165h28M922 189h28M922 213h28M963 167h37M963 191h37M963 215h37M1015 186h21M1015 210h21M1055 187h35M1055 211h35M1106 127h43M1106 151h43M1106 175h43M1106 199h43M1163 148h25M1163 172h25M1163 196h25M1163 220h25M475 131h60M475 155h60M475 179h60M475 203h60M484 101h42M745 102h50M745 126h50M745 150h50M745 174h50M745 198h50" fill="none" stroke="#ffd77a" stroke-width="3" stroke-dasharray="3 6"/>
+<path class="wb" d="M-1 201h26M40 173h48M40 197h48M40 221h48M105 157h38M105 181h38M105 205h38M156 132h33M156 156h33M156 180h33M156 204h33M201 159h43M201 183h43M201 207h43M258 133h50M258 157h50M258 181h50M258 205h50M326 126h31M326 150h31M326 174h31M326 198h31M372 182h35M372 206h35M547 157h32M547 181h32M547 205h32M592 200h46M650 174h52M650 198h52M816 153h36M816 177h36M816 201h36M871 140h38M871 164h38M871 188h38M871 212h38M922 177h28M922 201h28M963 179h37M963 203h37M1015 198h21M1055 199h35M1106 139h43M1106 163h43M1106 187h43M1106 211h43M1163 160h25M1163 184h25M1163 208h25M475 119h60M475 143h60M475 167h60M475 191h60M475 215h60M484 89h42M492 67h26M745 114h50M745 138h50M745 162h50M745 186h50M745 210h50" fill="none" stroke="#ffb6d9" stroke-width="3" stroke-dasharray="3 7"/>
+</svg></div>
+</header>
+
+<div class="ticker" aria-hidden="true"><div class="tk" id="tk"></div></div>
+
+<section class="flips"><div class="w">
+  <h2 class="rv"><b>♡</b><span data-t="sec">Le saviez-vous ?</span></h2>
+  <p class="lead rv" style="--i:1" data-t="lead">Cliquez sur une carte pour découvrir une petite histoire.</p>
+  <div class="deck">
+
+    <div class="fw rv" style="--i:0"><button class="flip" type="button" aria-pressed="false"><span class="inner">
+      <span class="face front"><span class="bag" style="--bag:linear-gradient(160deg,#e8132f,#9b0a21);--hd:#f4d27a">
+        <span class="lab" data-t="th1">Mondain</span>
+        <span class="ic"><svg viewBox="0 0 100 100" aria-hidden="true">
+          <path d="M38 8h6q6 12 12 0h6l-2 26 18 58H22l18-58z" fill="url(#gold)" stroke="#fff6d6" stroke-width="1.5" stroke-linejoin="round"/>
+          <g fill="#fff"><path class="star" d="M14 22l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/><path class="star" d="M86 40l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/><path class="star" d="M80 10l1.5 4 4 1.5-4 1.5-1.5 4-1.5-4-4-1.5 4-1.5z"/></g>
+        </svg></span>
+        <span class="hint" data-t="hint">Cliquer pour retourner</span></span></span>
+      <span class="face back"><span class="card">
+        <span class="cl"><span data-t="c_par">Paris</span></span><span class="orn" aria-hidden="true">✦ ✦ ✦</span>
+        <span class="note" data-t="a1">En 1926, le magazine Vogue présente la petite robe noire de Chanel et la surnomme « la Ford », comme la célèbre Ford T : simple, pratique et faite pour toutes les femmes.</span>
+        <span class="loc"><span data-t="c_par">Paris</span><b class="clk" data-tz="Europe/Paris">--:--</b></span></span></span>
+    </span></button></div>
+
+    <div class="fw rv" style="--i:1"><button class="flip" type="button" aria-pressed="false"><span class="inner">
+      <span class="face front"><span class="bag" style="--bag:linear-gradient(160deg,#34343d,#0b0b0f);--hd:#f4d27a;--lc:#ffe08a">
+        <span class="lab" data-t="th2">Architecture</span>
+        <span class="ic"><svg viewBox="0 0 100 100" aria-hidden="true">
+          <defs><clipPath id="cw"><rect x="0" y="0" width="100" height="100"/></clipPath></defs>
+          <g fill="#fff" stroke="url(#gold)" stroke-width="3" stroke-linejoin="round"><path d="M8 74C12 44 28 26 50 22 46 40 40 58 36 74z"/><path d="M32 74C36 48 50 30 72 28 68 44 62 58 58 74z"/><path d="M54 74C58 56 70 42 92 42 88 54 82 66 80 74z"/></g>
+          <rect x="4" y="74" width="92" height="10" fill="url(#gold)"/>
+          <g clip-path="url(#cw)"><path class="wv" d="M-30 94q6-5 12 0t12 0 12 0 12 0 12 0 12 0 12 0 12 0 12 0 12 0 12 0 12 0 12 0 12 0" fill="none" stroke="#ffe08a" stroke-width="3.5" stroke-linecap="round"/></g>
+        </svg></span>
+        <span class="hint" data-t="hint">Cliquer pour retourner</span></span></span>
+      <span class="face back"><span class="card">
+        <span class="cl"><span data-t="c_syd">Sydney</span></span><span class="orn" aria-hidden="true">✦ ✦ ✦</span>
+        <span class="note" data-t="a2">L'Opéra de Sydney devait être terminé en 4 ans pour 7 millions de dollars australiens. Il a fallu 14 ans et environ 102 millions : l'un des chantiers les plus en retard de l'histoire !</span>
+        <span class="loc"><span data-t="c_syd">Sydney</span><b class="clk" data-tz="Australia/Sydney">--:--</b></span></span></span>
+    </span></button></div>
+
+    <div class="fw rv" style="--i:2"><button class="flip" type="button" aria-pressed="false"><span class="inner">
+      <span class="face front"><span class="bag" style="--bag:radial-gradient(circle,#4a2f26 0 3.4px,transparent 3.9px) 0 0/22px 22px,#fff7ee;--hd:#8a5a3a;--lc:#ffe8b8;--lbg:#4a2f26;--hc:#fff;--hbg:#4a2f26">
+        <span class="lab" data-t="th3">Culture</span>
+        <span class="ic"><svg viewBox="0 0 100 100" aria-hidden="true">
+          <g transform="translate(38 60)"><g class="spin"><circle r="21" fill="none" stroke="#4a2f26" stroke-width="10" stroke-dasharray="5.5 5.5"/><circle r="15" fill="url(#gold)" stroke="#4a2f26" stroke-width="3"/><circle r="4.5" fill="#4a2f26"/></g></g>
+          <g transform="translate(71 34)"><g class="spinr"><circle r="15" fill="none" stroke="#c2185b" stroke-width="8" stroke-dasharray="4.7 4.7"/><circle r="10" fill="#ffb6d9" stroke="#4a2f26" stroke-width="3"/><circle r="3.5" fill="#4a2f26"/></g></g>
+          <circle cx="76" cy="78" r="7" fill="#c2185b" stroke="#4a2f26" stroke-width="3"/>
+        </svg></span>
+        <span class="hint" data-t="hint">Cliquer pour retourner</span></span></span>
+      <span class="face back"><span class="card">
+        <span class="cl"><span data-t="c_fr">Fribourg</span></span><span class="orn" aria-hidden="true">✦ ✦ ✦</span>
+        <span class="note" data-t="a3">Jean Tinguely, le sculpteur des machines qui bougent et font du bruit, est né à Fribourg en 1925. Sa fontaine Jo Siffert, inaugurée en 1984, est à voir à Fribourg.</span>
+        <span class="loc"><span data-t="c_fr">Fribourg</span><b class="clk" data-tz="Europe/Zurich">--:--</b></span></span></span>
+    </span></button></div>
+
+    <div class="fw rv" style="--i:3"><button class="flip" type="button" aria-pressed="false"><span class="inner">
+      <span class="face front"><span class="bag" style="--bag:linear-gradient(160deg,#ff6cb6,#d11a78);--hd:#f8f0ff">
+        <span class="lab" data-t="th4">Curiosité</span>
+        <span class="ic"><svg viewBox="0 0 100 100" aria-hidden="true">
+          <g class="bell"><path d="M50 10C63 10 69 24 69 40c0 15 4 22 13 30H18c9-8 13-15 13-30 0-16 6-30 19-30z" fill="url(#gold)" stroke="#fff6d6" stroke-width="2" stroke-linejoin="round"/>
+          <rect x="44" y="4" width="12" height="9" rx="3" fill="#fff0b0" stroke="#c98a22" stroke-width="2"/><circle cx="50" cy="79" r="7" fill="url(#gold)" stroke="#fff6d6" stroke-width="2"/>
+          <path d="M34 36q2-12 12-16" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".85"/></g>
+        </svg></span>
+        <span class="hint" data-t="hint">Cliquer pour retourner</span></span></span>
+      <span class="face back"><span class="card">
+        <span class="cl"><span data-t="c_lon">Londres</span></span><span class="orn" aria-hidden="true">✦ ✦ ✦</span>
+        <span class="note" data-t="a4">Big Ben n'est pas une tour ! C'est le nom de la grosse cloche, qui pèse 13,7 tonnes. La tour s'appelle Elizabeth Tower depuis 2012.</span>
+        <span class="loc"><span data-t="c_lon">Londres</span><b class="clk" data-tz="Europe/London">--:--</b></span></span></span>
+    </span></button></div>
+
+  </div>
+
+  <div class="contact rv">
+    <h3 data-t="ctt">Contact</h3>
+    <div class="item"><small data-t="mail">E-mail</small><a href="mailto:info@evita9vintage.ch">info@evita9vintage.ch</a></div>
+    <div class="item"><small data-t="tel">Téléphone</small><a href="tel:+41793137444">079 313 74 44</a></div>
+  </div>
+</div></section>
+</main>
+<footer><p data-t="foot">Les ventes sont conclues par l'intermédiaire de Ricardo.</p><p class="cr">© 2026 evita9vintage · <span data-t="by">Site créé par</span> <a href="https://www.chelmu.ch" target="_blank" rel="noopener">chelmu.ch</a></p></footer>
+
+<div class="bar">
+  <nav class="langs" aria-label="Langue · Sprache · Language · Lingua">
+    <button type="button" data-l="fr" lang="fr" aria-label="Français" aria-pressed="true">FR</button>
+    <button type="button" data-l="de" lang="de" aria-label="Deutsch" aria-pressed="false">DE</button>
+    <button type="button" data-l="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+    <button type="button" data-l="it" lang="it" aria-label="Italiano" aria-pressed="false">IT</button>
+  </nav>
+  <span class="tray clk" data-tz="Europe/Zurich" title="Fribourg">--:--</span>
+</div>
+
+<script>
+(function(){
+  var T={
+    fr:{sub:"Des pièces choisies une à une.",cta:"Voir les annonces",mail:"E-mail",tel:"Téléphone",ctt:"Contact",
+        foot:"Les ventes sont conclues par l'intermédiaire de Ricardo.",
+        desc:"Des pièces vintage choisies une à une. Ventes via Ricardo.",
+        sec:"Le saviez-vous ?",lead:"Cliquez sur une carte pour découvrir une petite histoire.",hint:"Cliquer pour retourner",
+        th1:"Mondain",th2:"Architecture",th3:"Culture",th4:"Curiosité",
+        a1:"En 1926, le magazine Vogue présente la petite robe noire de Chanel et la surnomme « la Ford », comme la célèbre Ford T : simple, pratique et faite pour toutes les femmes.",
+        a2:"L'Opéra de Sydney devait être terminé en 4 ans pour 7 millions de dollars australiens. Il a fallu 14 ans et environ 102 millions : l'un des chantiers les plus en retard de l'histoire !",
+        a3:"Jean Tinguely, le sculpteur des machines qui bougent et font du bruit, est né à Fribourg en 1925. Sa fontaine Jo Siffert, inaugurée en 1984, est à voir à Fribourg.",
+        a4:"Big Ben n'est pas une tour ! C'est le nom de la grosse cloche, qui pèse 13,7 tonnes. La tour s'appelle Elizabeth Tower depuis 2012.",
+        c_fr:"Fribourg",c_par:"Paris",c_lon:"Londres",c_rom:"Rome",c_ist:"Istanbul",c_cai:"Le Caire",c_dxb:"Dubaï",c_tyo:"Tokyo",c_syd:"Sydney",c_rio:"Rio de Janeiro",c_nyc:"New York",c_lax:"Los Angeles"},
+    de:{sub:"Stücke, einzeln ausgewählt.",cta:"Angebote ansehen",mail:"E-Mail",tel:"Telefon",ctt:"Kontakt",
+        foot:"Die Verkäufe werden über Ricardo abgewickelt.",
+        desc:"Vintage-Stücke, einzeln ausgewählt. Verkauf über Ricardo.",
+        sec:"Wussten Sie schon?",lead:"Klicken Sie auf eine Karte und entdecken Sie eine kleine Geschichte.",hint:"Zum Umdrehen klicken",
+        th1:"Mondän",th2:"Architektur",th3:"Kultur",th4:"Kuriosität",
+        a1:"1926 stellte die Vogue das kleine Schwarze von Chanel vor und nannte es «die Ford» – wie das berühmte Modell T: schlicht, praktisch und für alle Frauen gemacht.",
+        a2:"Das Opernhaus von Sydney sollte in 4 Jahren für 7 Millionen australische Dollar fertig sein. Es wurden 14 Jahre und rund 102 Millionen – eine der größten Bauverspätungen der Geschichte!",
+        a3:"Jean Tinguely, der Bildhauer der Maschinen, die sich bewegen und Lärm machen, wurde 1925 in Freiburg (Schweiz) geboren. Sein Jo-Siffert-Brunnen von 1984 ist dort zu sehen.",
+        a4:"Big Ben ist gar kein Turm! So heißt die 13,7 Tonnen schwere Glocke. Der Turm heißt seit 2012 Elizabeth Tower.",
+        c_fr:"Freiburg",c_par:"Paris",c_lon:"London",c_rom:"Rom",c_ist:"Istanbul",c_cai:"Kairo",c_dxb:"Dubai",c_tyo:"Tokio",c_syd:"Sydney",c_rio:"Rio de Janeiro",c_nyc:"New York",c_lax:"Los Angeles"},
+    en:{sub:"Pieces chosen one by one.",cta:"View listings",mail:"Email",tel:"Phone",ctt:"Contact",
+        foot:"Sales are completed through Ricardo.",
+        desc:"Vintage pieces chosen one by one. Sold through Ricardo.",
+        sec:"Did you know?",lead:"Click a card to discover a little story.",hint:"Click to flip",
+        th1:"High society",th2:"Architecture",th3:"Culture",th4:"Curiosity",
+        a1:"In 1926, Vogue showed Chanel's little black dress and nicknamed it “the Ford”, after the famous Model T: simple, practical and made for every woman.",
+        a2:"The Sydney Opera House was meant to take 4 years and cost 7 million Australian dollars. It took 14 years and about 102 million: one of history's most famous building delays!",
+        a3:"Jean Tinguely, the sculptor of machines that move and make noise, was born in Fribourg, Switzerland, in 1925. His Jo Siffert Fountain, unveiled in 1984, can be seen there.",
+        a4:"Big Ben isn't a tower! It's the name of the great bell, which weighs 13.7 tonnes. The tower has been called Elizabeth Tower since 2012.",
+        c_fr:"Fribourg",c_par:"Paris",c_lon:"London",c_rom:"Rome",c_ist:"Istanbul",c_cai:"Cairo",c_dxb:"Dubai",c_tyo:"Tokyo",c_syd:"Sydney",c_rio:"Rio de Janeiro",c_nyc:"New York",c_lax:"Los Angeles"},
+    it:{sub:"Pezzi scelti uno a uno.",cta:"Vedi gli annunci",mail:"E-mail",tel:"Telefono",ctt:"Contatti",
+        foot:"Le vendite vengono concluse tramite Ricardo.",
+        desc:"Pezzi vintage scelti uno a uno. Vendite tramite Ricardo.",
+        sec:"Lo sapevi?",lead:"Clicca su una carta per scoprire una piccola storia.",hint:"Clicca per girare",
+        th1:"Mondanità",th2:"Architettura",th3:"Cultura",th4:"Curiosità",
+        a1:"Nel 1926 Vogue presentò il tubino nero di Chanel e lo soprannominò «la Ford», come la celebre Ford T: semplice, pratico e fatto per tutte le donne.",
+        a2:"L'Opera House di Sydney doveva essere pronta in 4 anni con 7 milioni di dollari australiani. Ne sono serviti 14 e circa 102 milioni: uno dei cantieri più in ritardo della storia!",
+        a3:"Jean Tinguely, lo scultore delle macchine che si muovono e fanno rumore, è nato a Friburgo, in Svizzera, nel 1925. La sua Fontana Jo Siffert, inaugurata nel 1984, si può vedere lì.",
+        a4:"Big Ben non è una torre! È il nome della grande campana, che pesa 13,7 tonnellate. La torre si chiama Elizabeth Tower dal 2012.",
+        c_fr:"Friburgo",c_par:"Parigi",c_lon:"Londra",c_rom:"Roma",c_ist:"Istanbul",c_cai:"Il Cairo",c_dxb:"Dubai",c_tyo:"Tokyo",c_syd:"Sydney",c_rio:"Rio de Janeiro",c_nyc:"New York",c_lax:"Los Angeles"}
+  };
+
+  /* ---- 20 histoires : 5 par domaine, la carte Culture reste à Fribourg ---- */
+  var X={
+   fr:{lead:"Cliquez sur une carte pour découvrir une petite histoire. De nouvelles histoires arrivent toutes les heures.",
+    c_ant:"Anvers",c_bru:"Bruxelles",c_mtx:"Montreux",c_gal:"Galați",
+    m2:"Le Met Gala, le grand bal de la mode à New York, existe depuis 1948. À l'origine, c'était un dîner à 50 dollars la place, organisé pour soutenir le Costume Institute du Metropolitan Museum.",
+    m3:"L'hippodrome d'Ascot a été fondé en 1711 par la reine Anne. Chaque été, les courses du Royal Ascot sont aussi un défilé de chapeaux élégants.",
+    m4:"Anvers est la capitale mondiale du diamant : environ 80 % des diamants bruts du monde passent par son quartier des diamantaires.",
+    m5:"Le grand écrivain Vladimir Nabokov a vécu à l'hôtel Montreux Palace de 1961 jusqu'à sa mort en 1977, au sixième étage.",
+    r2:"L'Atomium, construit pour l'Exposition universelle de Bruxelles en 1958, mesure 102 mètres : c'est un cristal de fer agrandi 165 milliards de fois.",
+    r3:"La gare centrale d'Anvers, terminée en 1905, est surnommée la « cathédrale des chemins de fer » à cause de sa grande coupole. En 2014, un magazine l'a classée plus belle gare du monde.",
+    r4:"La tour Eiffel ne devait rester que 20 ans ! Elle aurait pu être démontée en 1910, mais ses antennes de radio l'ont sauvée.",
+    r5:"L'Empire State Building a été inauguré le 1er mai 1931, seulement 410 jours après le début du chantier. Il est resté le plus haut du monde pendant presque 40 ans.",
+    f2:"À Fribourg, le funiculaire fonctionne depuis 1899 avec de l'eau… usée ! L'eau des égouts remplit la cabine du haut, et sa descente fait monter l'autre.",
+    f3:"En 1834, Fribourg inaugurait un pont suspendu de 273 mètres de portée : le plus long du monde pendant 15 ans. Il a été remplacé en 1924 par le pont de Zaehringen.",
+    f4:"Fribourg a été fondée en 1157 par le duc Berthold IV de Zähringen. Son nom allemand, Freiburg, veut dire « forteresse libre ».",
+    f5:"Fribourg est sur la frontière entre la Suisse romande et la Suisse alémanique. Son Université, inaugurée en 1889, est officiellement bilingue : on y étudie en français et en allemand.",
+    k2:"À Bruxelles, la célèbre statue du Manneken-Pis possède une garde-robe de plus de 900 costumes, qu'on lui change plusieurs fois par an !",
+    k3:"En 1971, le casino de Montreux a brûlé pendant un concert. Le groupe Deep Purple, qui devait y enregistrer un album, en a fait la chanson « Smoke on the Water ».",
+    k4:"Dans le roman « Dracula » de Bram Stoker, c'est dans le port de Galați, sur le Danube, que le comte Dracula débarque !",
+    k5:"Istanbul est à cheval sur deux continents : le Bosphore sépare la partie européenne de la partie asiatique de la ville."},
+   de:{lead:"Klicken Sie auf eine Karte und entdecken Sie eine kleine Geschichte. Jede Stunde gibt es neue.",
+    c_ant:"Antwerpen",c_bru:"Brüssel",c_mtx:"Montreux",c_gal:"Galați",
+    m2:"Die Met Gala, der große Modeball von New York, gibt es seit 1948. Ursprünglich war sie ein Abendessen für 50 Dollar pro Platz zugunsten des Costume Institute des Metropolitan Museum.",
+    m3:"Die Pferderennbahn von Ascot wurde 1711 von Königin Anne gegründet. Beim Royal Ascot im Sommer sind die eleganten Hüte fast so berühmt wie die Pferde.",
+    m4:"Antwerpen ist die Welthauptstadt des Diamanten: Rund 80 % der Rohdiamanten der Welt laufen durch das Diamantenviertel.",
+    m5:"Der große Schriftsteller Vladimir Nabokov lebte von 1961 bis zu seinem Tod 1977 im Montreux Palace – im sechsten Stock des Hotels.",
+    r2:"Das Atomium, gebaut für die Weltausstellung 1958 in Brüssel, ist 102 Meter hoch: ein Eisenkristall, 165 Milliarden Mal vergrößert.",
+    r3:"Der Hauptbahnhof von Antwerpen, 1905 fertiggestellt, heißt wegen seiner großen Kuppel «Eisenbahnkathedrale». 2014 setzte ihn ein Magazin auf Platz 1 der schönsten Bahnhöfe der Welt.",
+    r4:"Der Eiffelturm sollte nur 20 Jahre stehen! 1910 hätte er abgebaut werden können, doch seine Funkantennen haben ihn gerettet.",
+    r5:"Das Empire State Building wurde am 1. Mai 1931 eröffnet, nur 410 Tage nach Baubeginn. Fast 40 Jahre lang war es das höchste Gebäude der Welt.",
+    f2:"In Freiburg fährt die Standseilbahn seit 1899 mit Abwasser! Das Abwasser füllt die obere Kabine, und ihr Abstieg zieht die andere nach oben.",
+    f3:"1834 weihte Freiburg eine Hängebrücke mit 273 Metern Spannweite ein: 15 Jahre lang die längste der Welt. 1924 wurde sie durch die Zähringerbrücke ersetzt.",
+    f4:"Freiburg wurde 1157 von Herzog Berthold IV. von Zähringen gegründet. Der Name bedeutet «freie Burg».",
+    f5:"Freiburg liegt an der Sprachgrenze zwischen der Westschweiz und der Deutschschweiz. Die 1889 eröffnete Universität ist offiziell zweisprachig: Man studiert auf Französisch und Deutsch.",
+    k2:"In Brüssel besitzt das berühmte Manneken Pis eine Garderobe mit mehr als 900 Kostümen, die mehrmals im Jahr gewechselt werden!",
+    k3:"1971 brannte das Casino von Montreux während eines Konzerts ab. Deep Purple, die dort ein Album aufnehmen wollten, machten daraus den Song «Smoke on the Water».",
+    k4:"In Bram Stokers Roman «Dracula» geht Graf Dracula im Donauhafen Galați an Land!",
+    k5:"Istanbul liegt auf zwei Kontinenten: Der Bosporus trennt den europäischen vom asiatischen Teil der Stadt."},
+   en:{lead:"Click a card to discover a little story. New stories arrive every hour.",
+    c_ant:"Antwerp",c_bru:"Brussels",c_mtx:"Montreux",c_gal:"Galați",
+    m2:"The Met Gala, New York's great fashion ball, dates from 1948. It began as a $50-a-ticket dinner to support the Metropolitan Museum's Costume Institute.",
+    m3:"Ascot racecourse was founded in 1711 by Queen Anne. At the summer Royal Ascot meeting, the elegant hats are almost as famous as the horses.",
+    m4:"Antwerp is the world's diamond capital: around 80% of the world's rough diamonds pass through its diamond district.",
+    m5:"The great writer Vladimir Nabokov lived at the Montreux Palace hotel from 1961 until his death in 1977, on the sixth floor.",
+    r2:"The Atomium, built for the 1958 Brussels World's Fair, stands 102 metres tall: it is an iron crystal magnified 165 billion times.",
+    r3:"Antwerp's central station, finished in 1905, is nicknamed the “railway cathedral” for its grand dome. In 2014 a magazine ranked it the most beautiful station in the world.",
+    r4:"The Eiffel Tower was only meant to stand for 20 years! It could have been dismantled in 1910, but its radio antennas saved it.",
+    r5:"The Empire State Building opened on 1 May 1931, just 410 days after construction began. It was the world's tallest building for almost 40 years.",
+    f2:"In Fribourg, the funicular has run since 1899 on waste water! Sewage water fills the upper car, and its descent pulls the other one up.",
+    f3:"In 1834, Fribourg opened a suspension bridge with a 273-metre span: the longest in the world for 15 years. It was replaced in 1924 by the Zaehringen Bridge.",
+    f4:"Fribourg was founded in 1157 by Duke Berthold IV of Zähringen. Its German name, Freiburg, means “free fortress”.",
+    f5:"Fribourg sits on the border between French- and German-speaking Switzerland. Its university, inaugurated in 1889, is officially bilingual: you can study in French and German.",
+    k2:"In Brussels, the famous Manneken Pis statue has a wardrobe of more than 900 costumes, and he is dressed up several times a year!",
+    k3:"In 1971, the Montreux Casino burned down during a concert. Deep Purple, who were due to record an album there, turned it into the song “Smoke on the Water”.",
+    k4:"In Bram Stoker's novel “Dracula”, Count Dracula comes ashore in the Danube port of Galați!",
+    k5:"Istanbul straddles two continents: the Bosphorus separates the European and Asian sides of the city."},
+   it:{lead:"Clicca su una carta per scoprire una piccola storia. Nuove storie ogni ora.",
+    c_ant:"Anversa",c_bru:"Bruxelles",c_mtx:"Montreux",c_gal:"Galați",
+    m2:"Il Met Gala, il grande ballo della moda di New York, esiste dal 1948. All'inizio era una cena a 50 dollari a posto per sostenere il Costume Institute del Metropolitan Museum.",
+    m3:"L'ippodromo di Ascot fu fondato nel 1711 dalla regina Anna. Al Royal Ascot, in estate, i cappelli eleganti sono quasi famosi quanto i cavalli.",
+    m4:"Anversa è la capitale mondiale del diamante: circa l'80% dei diamanti grezzi del mondo passa dal suo quartiere dei diamanti.",
+    m5:"Il grande scrittore Vladimir Nabokov visse al Montreux Palace dal 1961 fino alla morte nel 1977, al sesto piano dell'hotel.",
+    r2:"L'Atomium, costruito per l'Esposizione universale di Bruxelles del 1958, è alto 102 metri: è un cristallo di ferro ingrandito 165 miliardi di volte.",
+    r3:"La stazione centrale di Anversa, terminata nel 1905, è soprannominata «cattedrale delle ferrovie» per la sua grande cupola. Nel 2014 una rivista l'ha classificata come la stazione più bella del mondo.",
+    r4:"La Torre Eiffel doveva restare in piedi solo 20 anni! Nel 1910 poteva essere smontata, ma le sue antenne radio l'hanno salvata.",
+    r5:"L'Empire State Building fu inaugurato il 1° maggio 1931, appena 410 giorni dopo l'inizio dei lavori. Per quasi 40 anni è stato l'edificio più alto del mondo.",
+    f2:"A Friburgo la funicolare funziona dal 1899 con acque di scarico! L'acqua reflua riempie la cabina in alto e la sua discesa fa salire l'altra.",
+    f3:"Nel 1834 Friburgo inaugurò un ponte sospeso con 273 metri di luce: il più lungo del mondo per 15 anni. Nel 1924 fu sostituito dal ponte di Zaehringen.",
+    f4:"Friburgo fu fondata nel 1157 dal duca Bertoldo IV di Zähringen. Il suo nome tedesco, Freiburg, significa «fortezza libera».",
+    f5:"Friburgo si trova sul confine tra la Svizzera romanda e quella tedesca. La sua università, inaugurata nel 1889, è ufficialmente bilingue: si studia in francese e in tedesco.",
+    k2:"A Bruxelles la celebre statua del Manneken Pis possiede un guardaroba di oltre 900 costumi, che cambia più volte all'anno!",
+    k3:"Nel 1971 il casinò di Montreux andò a fuoco durante un concerto. I Deep Purple, che dovevano registrarvi un album, ne fecero la canzone «Smoke on the Water».",
+    k4:"Nel romanzo «Dracula» di Bram Stoker, il conte Dracula sbarca nel porto danubiano di Galați!",
+    k5:"Istanbul è a cavallo di due continenti: il Bosforo separa la parte europea da quella asiatica della città."}
+  };
+  ["fr","de","en","it"].forEach(function(l){
+    var o=X[l];for(var k in o)T[l][k]=o[k];
+    T[l].m1=T[l].a1;T[l].r1=T[l].a2;T[l].f1=T[l].a3;T[l].k1=T[l].a4;
+  });
+  T.fr.by="Site créé par";T.de.by="Website erstellt von";T.en.by="Website created by";T.it.by="Sito creato da";
+  /* domaine -> 5 histoires, avec la ville et son fuseau */
+  var DECK=[
+   {p:"m",v:[["c_par","Europe/Paris"],["c_nyc","America/New_York"],["c_lon","Europe/London"],["c_ant","Europe/Brussels"],["c_mtx","Europe/Zurich"]]},
+   {p:"r",v:[["c_syd","Australia/Sydney"],["c_bru","Europe/Brussels"],["c_ant","Europe/Brussels"],["c_par","Europe/Paris"],["c_nyc","America/New_York"]]},
+   {p:"f",v:[["c_fr","Europe/Zurich"],["c_fr","Europe/Zurich"],["c_fr","Europe/Zurich"],["c_fr","Europe/Zurich"],["c_fr","Europe/Zurich"]]},
+   {p:"k",v:[["c_lon","Europe/London"],["c_bru","Europe/Brussels"],["c_mtx","Europe/Zurich"],["c_gal","Europe/Bucharest"],["c_ist","Europe/Istanbul"]]}
+  ];
+  var CITIES=[["c_fr","Europe/Zurich"],["c_par","Europe/Paris"],["c_lon","Europe/London"],["c_rom","Europe/Rome"],["c_ist","Europe/Istanbul"],["c_cai","Africa/Cairo"],
+              ["c_dxb","Asia/Dubai"],["c_tyo","Asia/Tokyo"],["c_syd","Australia/Sydney"],["c_rio","America/Sao_Paulo"],["c_nyc","America/New_York"],["c_lax","America/Los_Angeles"]];
+
+  /* bandeau des 12 villes (deux copies pour une boucle sans coupure) */
+  var tk=document.getElementById("tk");
+  function group(){
+    var g=document.createElement("div");
+    CITIES.forEach(function(c){
+      var s=document.createElement("span");s.className="ci";
+      var n=document.createElement("b");n.setAttribute("data-t",c[0]);n.textContent=T.fr[c[0]];
+      var t=document.createElement("i");t.className="clk";t.setAttribute("data-tz",c[1]);t.textContent="--:--";
+      s.appendChild(n);s.appendChild(t);g.appendChild(s);
+      var m=document.createElement("span");m.className="s";m.textContent="✦";g.appendChild(m);
+    });
+    return g;
+  }
+  tk.appendChild(group());tk.appendChild(group());
+
+  var KEY="evita9vintage-lang";
+  var btns=document.querySelectorAll(".langs button");
+  var cta=document.getElementById("cta");
+  var meta=document.querySelector('meta[name="description"]');
+  function apply(l){
+    if(!T[l]) l="fr";
+    document.documentElement.lang=l;
+    document.querySelectorAll("[data-t]").forEach(function(e){var v=T[l][e.getAttribute("data-t")];if(v!==undefined)e.textContent=v});
+    var u="https://www.ricardo.ch/"+l+"/shop/evita9vintage/offers/";
+    if(cta) cta.href=u;
+    var c2=document.getElementById("cta2"); if(c2) c2.href=u;
+    if(meta) meta.setAttribute("content",T[l].desc);
+    btns.forEach(function(b){b.setAttribute("aria-pressed",b.getAttribute("data-l")===l?"true":"false")});
+    try{localStorage.setItem(KEY,l)}catch(e){}
+  }
+  btns.forEach(function(b){b.addEventListener("click",function(){apply(b.getAttribute("data-l"))})});
+  var start=null;
+  try{start=localStorage.getItem(KEY)}catch(e){}
+  if(!start){var nav=(navigator.languages&&navigator.languages[0])||navigator.language||"fr";start=String(nav).slice(0,2).toLowerCase()}
+  apply(T[start]?start:"fr");
+
+  /* heures locales (hh:mm) */
+  var clks=document.querySelectorAll(".clk[data-tz]");
+  function tick(){
+    var d=new Date();
+    clks.forEach(function(c){try{c.textContent=d.toLocaleTimeString("en-GB",{timeZone:c.getAttribute("data-tz"),hour:"2-digit",minute:"2-digit"})}catch(e){}});
+  }
+  tick();setInterval(tick,10000);
+
+
+  /* une nouvelle histoire par carte à chaque heure pleine */
+  var lastSlot=-1;
+  function place(){
+    var slot=Math.floor(Date.now()/3600000);
+    if(slot===lastSlot) return; lastSlot=slot;
+    var fws=document.querySelectorAll(".deck .fw");
+    DECK.forEach(function(d,i){
+      var idx=(slot+i*2)%5, s=d.v[idx], key=d.p+(idx+1), fw=fws[i]; if(!fw) return;
+      fw.querySelector(".note").setAttribute("data-t",key);
+      fw.querySelectorAll(".cl [data-t],.loc>[data-t]").forEach(function(e){e.setAttribute("data-t",s[0])});
+      fw.querySelector(".loc .clk").setAttribute("data-tz",s[1]);
+    });
+    apply(document.documentElement.lang);tick();
+  }
+  place();setInterval(place,30000);
+
+  /* cartes à retourner */
+  document.querySelectorAll(".flip").forEach(function(b){
+    b.addEventListener("click",function(){b.setAttribute("aria-pressed",b.getAttribute("aria-pressed")==="true"?"false":"true")});
+  });
+
+  /* bandeau du haut : apparaît quand le gros bouton sort de l'écran */
+  var top=document.getElementById("top"),c2=document.getElementById("cta2");
+  function setTop(on){top.classList.toggle("on",on);c2.tabIndex=on?0:-1}
+  if("IntersectionObserver" in window){
+    new IntersectionObserver(function(es){var e=es[0];setTop(!e.isIntersecting&&e.boundingClientRect.top<0)}).observe(cta);
+  }else{setTop(true)}
+
+  /* apparition au défilement */
+  var rv=document.querySelectorAll(".rv");
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});
+    rv.forEach(function(e){io.observe(e)});
+  }else{rv.forEach(function(e){e.classList.add("in")})}
+})();
+</script>
+</body></html>
